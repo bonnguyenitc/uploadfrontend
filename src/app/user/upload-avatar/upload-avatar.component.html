@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6 text-center">
+      <h4>Ảnh đại diện trong tương lai</h4>
+      <span class="result" *ngIf="data1.image" >
+          <img [src]="data1.image" [width]="cropperSettings1.croppedWidth"
+               [height]="cropperSettings1.croppedHeight">
+              <!--{{data1.image.length}}-->
+      </span>
+      <br>
+      <br>
+      <button mat-raised-button color="warn" *ngIf="data1.image" (click)="upload(data1.image)">Upload</button>
+      <br>
+      <div *ngIf="isShowS" class="alert alert-success">
+        Upload thành công
+      </div>
+      <div *ngIf="isShowR" class="alert alert-danger">
+        Upload thất bại
+      </div>
+    </div>
+    <div class="col-6">
+      <div>
+        <img-cropper [image]="data1" [settings]="cropperSettings1" (onCrop)="cropped($event)"></img-cropper>
+      </div>
+    </div>
+  </div>
+</div>

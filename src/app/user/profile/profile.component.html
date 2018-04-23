@@ -1,0 +1,9 @@
+<mat-card class="example-card text-center">
+  <mat-card-header>
+    <mat-card-title>{{ user.username }}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src]="avatarUrl" alt="avatar">
+  <mat-card-actions>
+    <a routerLink="/upload-avatar" class="btn btn-primary">Upload Avatar</a>
+  </mat-card-actions>
+</mat-card>

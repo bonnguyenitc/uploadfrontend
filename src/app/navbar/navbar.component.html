@@ -1,0 +1,8 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <span routerLink="/dashboard">Demo App</span>
+    <span class="example-spacer"></span>
+    <button *ngIf="isLogged()" class="example-icon"  routerLink="/dashboard" mat-raised-button color="accent">Dashboard</button>
+    <button *ngIf="isLogged()" class="example-icon" (click)="logOut()" mat-raised-button color="primary">Log Out</button>
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <app-profile></app-profile>
+    </div>
+    <div class="col-8">
+      <p-growl [value]="msgS"></p-growl>
+
+      <h3 class="first">Upload Video</h3>
+      <p-fileUpload name="demo[]" url="http://localhost:3000/videos/upload" (onUpload)="onUpload($event)"
+                    multiple="false" accept="video/*" maxFileSize="1000000000"
+                    (onBeforeSend)="onBeforeSend($event)"
+      >
+        <ng-template pTemplate="content">
+          <ul *ngIf="uploadedFiles.length">
+            <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+          </ul>
+        </ng-template>
+      </p-fileUpload>
+    </div>
+  </div>
+</div>

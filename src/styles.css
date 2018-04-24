@@ -2,10 +2,40 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+.ui-fileupload-files {
+  display: inline !important;
+}
+.ui-fileupload-row {
+  display: inline-grid !important;
+  position: relative !important;
+  text-align: center !important;
+}
 .ui-fileupload-files img {
-  border: 0;
-  width: 300px;
+  width: 150px !important;
+  height: 150px !important;
 }
 canvas {
   margin-top: 50px;
 }
+.ui-button-icon-only {
+  position: absolute !important;
+  top: 8px !important;
+  right: 14px !important;
+}
+.zxc {
+  display: none !important;
+}
+
+div#add {
+  width: 150px;
+  height: 150px;
+  font-size: 50px;
+  text-align: center;
+  border: 5px #948c8c dotted;
+  color: #948c8c;
+  padding-top: 20px;
+}
+#nameFile {
+  display: none !important;
+}
+

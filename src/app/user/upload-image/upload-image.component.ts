@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit} from '@angular/core';
 import {Message} from 'primeng/api';
 import {UserService} from '../../user.service';
 
@@ -12,8 +12,7 @@ export class UploadImageComponent implements OnInit {
   msgS: Message[];
 
   uploadedFiles: any[] = [];
-
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService) {}
 
   ngOnInit() {
   }

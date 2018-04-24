@@ -8,8 +8,10 @@
 
       <h3 class="first">Upload Video</h3>
       <p-fileUpload name="demo[]" url="http://localhost:3000/videos/upload" (onUpload)="onUpload($event)"
-                    multiple="false" accept="video/*" maxFileSize="1000000000"
+                    accept="video/*" maxFileSize="1000000000"
+                    (onSelect)="onFileSelect($event, pfuReference)"
                     (onBeforeSend)="onBeforeSend($event)"
+                    #pfuReference
       >
         <ng-template pTemplate="content">
           <ul *ngIf="uploadedFiles.length">

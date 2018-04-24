@@ -4,8 +4,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ImageCropperModule } from 'ng2-img-cropper';
-import { FileUploadModule } from 'primeng/fileupload';
-import { GrowlModule } from 'primeng/growl';
+import { FileUploadModule } from '../../primeng/fileupload';
+import { GrowlModule } from '../../primeng/growl';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';

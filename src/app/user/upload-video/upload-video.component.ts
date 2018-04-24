@@ -1,5 +1,5 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {Message} from 'primeng/api';
+import {Message} from '../../../../primeng/api';
 import {UserService} from '../../user.service';
 @Component({
   selector: 'app-upload-video',

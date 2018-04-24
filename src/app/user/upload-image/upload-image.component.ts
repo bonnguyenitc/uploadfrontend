@@ -1,5 +1,5 @@
 import {Component, ElementRef, OnInit} from '@angular/core';
-import {Message} from 'primeng/api';
+import {Message} from '../../../../primeng/api';
 import {UserService} from '../../user.service';
 
 @Component({

@@ -460,18 +460,18 @@ var FileUpload = /** @class */ (function () {
             "\n" +
             "    <p-messages [value]=\"msgs\" [enableService]=\"false\"></p-messages>\n" +
             "\n" +
-            "    <div class=\"ui-fileupload-files\" *ngIf=\"hasFiles()\">\n" +
+            "    <div class=\"ui-fileupload-files\">\n" +
             "      <div *ngIf=\"!fileTemplate\">\n" +
             "        <div class=\"ui-fileupload-row\" *ngFor=\"let file of files; let i = index;\">\n" +
             "          <div *ngIf=\"isImage(file)\">\n" +
             "            <div><img [src]=\"file.objectURL\" *ngIf=\"isImage(file)\" [width]=\"previewWidth\" /></div>\n" +
-            "            <div>{{file.name}}</div>\n" +
+            "            <div class=\"zxc\">{{file.name}}</div>\n" +
             "            <div class=\"zxc\" >{{formatSize(file.size)}}</div>\n" +
             "            <div><button type=\"button\" icon=\"fa-close\" pButton (click)=\"remove($event,i)\"></button></div>\n" +
             "          </div>\n" +
             "          <div *ngIf=\"!isImage(file)\">\n" +
             "            <div [id]=\"'thumb-'+i\"></div>\n" +
-            "            <div id=\"nameFile\">{{file.name}}</div>\n" +
+            "            <div id=\"nameFile\" >{{file.name}}</div>\n" +
             "            <div class=\"zxc\" >{{formatSize(file.size)}}</div>\n" +
             "            <div><button id= \"btnthumb\" type=\"button\" icon=\"fa-close\" pButton (click)=\"remove($event,i)\"></button></div>\n" +
             "          </div>\n" +

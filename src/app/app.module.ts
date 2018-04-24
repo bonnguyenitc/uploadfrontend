@@ -12,12 +12,15 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { EditorImageComponent } from './editor-image/editor-image.component';
 
 // material
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatTooltipModule} from '@angular/material/tooltip';
 import { DasdboardComponent } from './dasdboard/dasdboard.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import { UploadAvatarComponent } from './user/upload-avatar/upload-avatar.component';
@@ -29,6 +32,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { UploadAvatarService } from './upload-avatar.service';
 import {UserService} from './user.service';
 import {AuthGuardService} from './auth-guard.service';
+import { EditorDialogComponent } from './editor-dialog/editor-dialog.component';
 
 
 @NgModule({
@@ -40,8 +44,13 @@ import {AuthGuardService} from './auth-guard.service';
     ProfileComponent,
     UploadAvatarComponent,
     UploadVideoComponent,
-    UploadImageComponent
+    UploadImageComponent,
+    EditorImageComponent,
+    EditorDialogComponent
   ],
+    entryComponents: [
+      EditorDialogComponent
+    ],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -56,7 +65,8 @@ import {AuthGuardService} from './auth-guard.service';
     ImageCropperModule,
     FileUploadModule,
     GrowlModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
   ],
   providers: [UploadAvatarService, UserService, AuthGuardService],
   bootstrap: [AppComponent]

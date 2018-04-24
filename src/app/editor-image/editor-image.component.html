@@ -1,0 +1,10 @@
+<div #host id="photo-host"></div>
+<div class="actions">
+  <!--<a class="btn btn-primary" (click)="cancelClick()" >Cancel</a>-->
+  <!--<a class="btn btn-danger pull-right" (click)="saveClick()">Save</a>-->
+  <div class="row">
+    <div class="col-6"><button mat-raised-button color="accent" (click)="cancelClick()" mat-dialog-close = "no">Cancel</button></div>
+    <div class="col-6 text-right" ><button mat-raised-button color="primary" (click)="saveClick()" mat-dialog-close = "yes">Save</button></div>
+  </div>
+
+</div>

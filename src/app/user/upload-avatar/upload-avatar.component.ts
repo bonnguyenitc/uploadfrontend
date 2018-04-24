@@ -51,7 +51,8 @@ export class UploadAvatarComponent implements OnInit {
   }
 
   upload(dataUrl) {
-    let token = this.userService.getToken();
+    // console.log(dataUrl);
+    const token = this.userService.getToken();
     this.uploadService.upload({dataUrl: dataUrl, token: token }).subscribe(db => {
         this.message = db;
         if (this.message.result === 'OK') {

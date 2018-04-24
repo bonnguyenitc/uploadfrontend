@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from '../../user.service';
+import { MatDialog } from '@angular/material/dialog';
+import {EditorDialogComponent} from '../../editor-dialog/editor-dialog.component';
 
 @Component({
   selector: 'app-profile',
@@ -9,7 +11,7 @@ import {UserService} from '../../user.service';
 export class ProfileComponent implements OnInit {
   user: any;
   avatarUrl: String;
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService, private dialog: MatDialog) {
     this.user = this.userService.getUserCurrent();
     // console.log(this.user);
     if (this.user.avatar) {
@@ -18,6 +20,17 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  showEdit(avatarUrl) {
+    this.dialog.open(EditorDialogComponent, {
+      data: { url: avatarUrl },
+      height: '100%',
+      width: '800px',
+    })
+      .afterClosed()
+      .subscribe(result => console.log(result))
+    ;
   }
 
 }

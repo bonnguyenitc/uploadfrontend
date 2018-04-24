@@ -2,8 +2,11 @@
   <mat-card-header>
     <mat-card-title>{{ user.username }}</mat-card-title>
   </mat-card-header>
-  <img mat-card-image [src]="avatarUrl" alt="avatar">
+  <mat-card-content>
+    <img mat-card-image [src]="avatarUrl"  alt="avatar">
+    <li class="fa fa-edit" (click)="showEdit(avatarUrl)"></li>
+  </mat-card-content>
   <mat-card-actions>
-    <a routerLink="/upload-avatar" class="btn btn-primary">Upload Avatar</a>
+    <a routerLink="/upload-avatar" mat-raised-button color="primary">Upload Avatar</a>
   </mat-card-actions>
 </mat-card>
